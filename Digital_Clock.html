@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<title>JS - Digital Clock</title>
+    	<title>Digital Clock</title>
     	<style type="text/css">
     		@font-face{
     			font-family:'digital-clock-font';
@@ -20,6 +20,7 @@
     			transform: translateX(-50%) translateY(-50%);
     			color: cyan;
     			font-size: 6.5em;
+    			padding: 5px 5px 5px 5px;
     			font-family:'digital-clock-font'
     		}
     	</style>	
@@ -32,10 +33,11 @@
 				var h = date.getHours(); //0-23
 				var m = date.getMinutes(); //0-59
 				var s = date.getSeconds(); //0-59
+				var session = "AM";
 
 				if(h == 0){
 					h = 12;
-					session = "AM";
+					
 				}
 
 				if(h > 12){
