@@ -1,63 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    	<title>Digital Clock</title>
-    	<style type="text/css">
-    		@font-face{
-    			font-family:'digital-clock-font';
-    			src: url('digital-7.italic.ttf');	
-}
-    		body{
-    			background-image: url('bgimage.jpg');
-    			background-repeat: no-repeat;
-    			background-attachment: fixed;
-    			background-size: 100% 100%;
-    		}
-    		.clock{
-    			position: absolute;
-    			top: 50%;
-    			left: 50%;
-    			transform: translateX(-50%) translateY(-50%);
-    			color: cyan;
-    			font-size: 6.5em;
-    			padding: 5px 5px 5px 5px;
-    			font-family:'digital-clock-font'
-    		}
-    	</style>	
-	</head>
-	<body>
-		<div id="MyClockDisplay" class="clock"></div>
-		<script type="text/javascript">
-			function showTime(){
-				var date = new Date();
-				var h = date.getHours(); //0-23
-				var m = date.getMinutes(); //0-59
-				var s = date.getSeconds(); //0-59
-				var session = "AM";
 
-				if(h == 0){
-					h = 12;
-					
-				}
+<head>
+	<title>Digital Clock</title>
+	<style type="text/css">
+		@font-face {
+			font-family: 'digital-clock-font';
+			src: url('digital-7.italic.ttf');
+		}
 
-				if(h > 12){
-					h = h - 12;
-					session = "PM";
-				}
+		body {
+			background-image: url('bgimage.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+			background-blend-mode: multiply;
+		}
 
-				h = (h < 10) ? "0" + h : h;
-				m = (m < 10) ? "0" + m : m;
-				s = (s < 10) ? "0" + s : s;
+		.clock {
+			position: absolute;
+			top: 48%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			color: red;
+			font-size: 8em;
+			padding: 5px 5px 5px 5px;
+			font-family: 'digital-clock-font'
 
-				var time ="  " + h + ":" + m + ":" + s + " " + session + "  ";
-				document.getElementById("MyClockDisplay").innerText = time;
-				document.getElementById("MyClockDisplay").textContent = time;
+		}
 
-				setTimeout(showTime, 1000);			
+		.credit {
+			position: absolute;
+			font-family: 'Courier New', Courier, monospace;
+			font-style: inherit;
+			top: 96%;
+			color: ivory;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style_responsive.css">
+</head>
+
+<body>
+	<div id="MyClockDisplay" class="clock"></div>
+	<script type="text/javascript">
+		function showTime() {
+			var date = new Date();
+			var h = date.getHours(); //0-23
+			var m = date.getMinutes(); //0-59
+			var s = date.getSeconds(); //0-59
+			var session = "AM";
+
+			if (h == 0) {
+				h = 12;
+
 			}
 
-			showTime();
-			
-		</script>
-	</body>
+			if (h > 12) {
+				h = h - 12;
+				session = "PM";
+			}
+
+			h = (h < 10) ? "0" + h : h;
+			m = (m < 10) ? "0" + m : m;
+			s = (s < 10) ? "0" + s : s;
+
+			var time = "  " + h + ":" + m + ":" + s + " " + session + "  ";
+			document.getElementById("MyClockDisplay").innerText = time;
+			document.getElementById("MyClockDisplay").textContent = time;
+
+			setTimeout(showTime, 1000);
+		}
+
+		showTime();
+
+
+	</script>
+	<a class="credit" href="http://www.freepik.com">Designed by Freepik</a>
+	<div class="area">My Digital Clock</div>
+
+	<!-- #Footer Section -->
+	<div class="footer-social-links">
+		<a href="https://github.com/hashtagpalak/" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+		<a href="https://www.linkedin.com/in/hashtagpalak" title="LinkedIn+" target="_blank"><i
+				class="fa fa-linkedin"></i></a>
+		<a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+		<a href="#" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+	</div>
+</body>
+
 </html>
