@@ -5,7 +5,7 @@
 .area {
   display:inline-block;
   text-align: center;
-  font-size:8em;
+  font-size:6em;
   color:orange;
   letter-spacing: -7px;
   text-transform: uppercase;
@@ -16,7 +16,7 @@
 }
 .footer-social-links{
     float: right;
-    font-size: 30px;
+    font-size: 10%;
     text-align: center;
     margin-top: 20px;  
     display: inline-block;
@@ -108,7 +108,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: red;
-    font-size: 6.5em;
+    font-size: 6em;
     padding: 5px 5px 5px 5px;
     font-family: 'digital-clock-font'
 
