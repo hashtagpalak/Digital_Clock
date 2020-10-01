@@ -1,6 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
-
+body {
+			background-image: url('bgimage.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100vh;
+			background-blend-mode: multiply;
+		}
 .area {
   display:inline-block;
   text-align: center;
