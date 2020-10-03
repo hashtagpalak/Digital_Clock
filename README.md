@@ -1,2 +1,6 @@
 # Digital_Clock
-Digital Clock through html, css, javascript
+Responsive Digital Clock
+<br>
+Language Used : HTML CSS JS
+<br>
+Thank U So Much
